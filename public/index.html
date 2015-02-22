@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List articles</title>
+    <!-- Not present in the tutorial. Just for basic styling. -->
+    <link rel="stylesheet" href="css/base.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.12.2/JSXTransformer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+  </head>
+  <body>
+    <div id="content">
+		<h3>
+			<b> Learning React JS</b>
+		</h3>
+		<hr>
+		<div class="sixteen columns row" id="info_block_type_educational">
+			<div class="horizontal-slide" id="educational_slider">
+			<!--- here we should read from a server some articles and list then horizontally -->
+				<div class="span thumbnail">
+					<a href="https://www.health-e-living.com/info_blocks/2" data-remote="true" title="What is diabetes?">
+					<div class="image">
+						<img id="ib_img_2"/> 
+					</div>
+					<div class="info_block_small_title title">What is diabetes?</div>
+					<!--- more: Regular meal, reduce stress, better sleep, quite smoking, whole grains -->
+					</a>
+				</div>
+			</div>
+		</div>		
+	</div>
+	<hr>
+	<div id="comments">
+			This is my comment
+	</div>
+    <script type="text/jsx;harmony=true" src="scripts/lessons.js"></script>
+  </body>
+</html>
+
+
