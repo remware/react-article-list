@@ -5,10 +5,10 @@ Check there for server installation on tutorial.
 Following example will use the UI structure:
 - HorizontalArticleThumbnailsList: a1, a2, a3, a4
 - CommentBox
--- Comment List
---- Author 1, Comment 1
---- Author 2, Comment 2
--- New Comment Form 
+- Comment List
+- Author 1, Comment 1
+- Author 2, Comment 2
+- New Comment Form 
 
 
 ## To use
@@ -16,17 +16,12 @@ Following example will use the UI structure:
 Start the one simple servers (python or node.js) They all serve static files from `public/` and handle requests to `comments.json` to fetch or add data. 
 Start a server with one of the following:
 
-### Node
-
 ```sh
 node server.js
 ```
-
-### Python
-
+or
 ```sh
 python server.py
 ```
 
-
-Open <http://localhost:3000/>. 
+And 0pen <http://localhost:3000/>. 
