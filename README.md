@@ -1,8 +1,8 @@
 # React Tutorial for Commenting on articles
 
 Based on the React comment box example from [the React tutorial](http://facebook.github.io/react/docs/tutorial.html).
-Check there for server installation. In this example by Rem on the UI structure as follows:
-
+Check there for server installation on tutorial. 
+Following example will use the UI structure:
 - HorizontalArticleThumbnailsList: a1, a2, a3, a4
 - CommentBox
 -- Comment List
