@@ -24,4 +24,4 @@ or
 python server.py
 ```
 
-And 0pen <http://localhost:3000/>. 
+and Open <http://localhost:3000/>. 
