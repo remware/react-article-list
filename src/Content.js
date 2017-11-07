@@ -1,5 +1,6 @@
 import React from 'react';
 import './Timeline.css';
+import ActivityItem from './ActivityItem';
 
 class Content extends React.Component {
 
@@ -10,16 +11,7 @@ class Content extends React.Component {
             <div className="content">
                 <div className="line"></div>
 
-                {activities.map((activity) => {
-                    return (
-                    <div className="item">
-                        <div className="avatar"> {activity.user.name} </div>
-                        <span className="time"> {activity.timestamp} </span>
-                        <p> {activity.text} </p>
-                        <div className="commentCount"> {activity.comments.length} </div>
-                    </div>
-                     ); } )
-                }
+                {activities.map((activity) => ( <ActivityItem activity={activity} />))}
             </div>
             );
         } 
