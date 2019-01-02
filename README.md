@@ -23,5 +23,7 @@ or
 ```sh
 python server.py
 ```
+or just react-scripts start
+
 
 and Open <http://localhost:3000/>. 
