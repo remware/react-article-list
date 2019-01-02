@@ -5,11 +5,11 @@ import './App.css';
 import Timeline from './Timeline';
 import './Timeline.css';
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div className="notificationsFrame">
-        <div className="panel">
+        <div className="panel">        
           <Timeline/>
         </div>
       </div>

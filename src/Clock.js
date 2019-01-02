@@ -1,10 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Clock extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = this.getTime();
+    }
+
+    componentDidMount() {
+        this.setTimer();
+    }
+
+    componentWillUnmount() {
+        if (this.timeout) {
+        clearTimeout(this.timeout);
+        }
     }
 
     //
@@ -19,6 +30,16 @@ class Clock extends React.Component {
             currentTime: currentTime
         },  this.setTimer());
        
+    }
+
+    getTime() {
+        const currentTime = new Date();
+        return {
+        hours: currentTime.getHours(),
+        minutes: currentTime.getMinutes(),
+        seconds: currentTime.getSeconds(),
+        ampm: currentTime.getHours() >= 12 ? 'pm' : 'am'
+        }
     }
 
     render() {
@@ -37,3 +58,32 @@ class Clock extends React.Component {
 }
 
 export default Clock;
+
+// Clock state IF
+Clock.propTypes = {
+    // key is the name of the prop and value is the PropType
+    title: PropTypes.string,
+    count: PropTypes.number,
+    isOn: PropTypes.bool,
+    onDisplay: PropTypes.func,
+    symbol: PropTypes.symbol,
+    user: PropTypes.object,
+    name: PropTypes.node,
+    counts: PropTypes.array,
+    users: PropTypes.arrayOf(PropTypes.object),
+    alarmColor: PropTypes.oneOf(['red', 'blue']),
+    description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.instanceOf(Title),   
+    ]),
+    basicObject: PropTypes.object,
+    numbers: PropTypes
+    .objectOf(PropTypes.numbers),
+    messages: PropTypes
+    .instanceOf(Message),
+    contactList: PropTypes.shape({
+    name: PropTypes.string,
+    phone: PropTypes.string,
+    displayEle: PropTypes.element
+    })
+    }
